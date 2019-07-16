@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <title>CricGuru Home</title>
+</head>
+	<style type="text/css" media="screen">
+	    body{
+    	background-image:url('https://o.aolcdn.com/images/dims3/GLOB/crop/3860x1934+6+206/resize/630x315!/format/jpg/quality/85/http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F1dbc79aa5433c96a91326ba3aa255889%2F203647551%2F177427917.jpg');
+    	background-size: cover;
+    	text-align:center;
+    	color: white;
+    	}	
+    	.heading{
+     	margin-top: 200px;
+     	letter-spacing: 18px;
+     	font-size: 75px;
+    	}
+    </style>
+<body>
+	<h1 class="heading">CRICGURU</h1>
+	<a href="menu"><button type="button" class="btn btn-outline-primary btn-lg">Check Stats</button></a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

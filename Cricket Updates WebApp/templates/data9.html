@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>New Player</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+body, html {
+    height: 100%;
+}
+
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+
+    padding: 20px;
+
+}
+body{
+background-image:url("https://www.setaswall.com/wp-content/uploads/2018/07/Cricket-Wallpaper-23-1182x888.jpg");
+background-repeat:no-repeat;
+height:100%;
+background-position:center;
+background-size:cover;
+}
+button
+{
+background-color: #45a049;
+ background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+float:right;
+}
+h1{
+clear:right;
+}
+
+</style>
+</head>
+<body>
+<a href="menu"><button>Logout</button></a>
+<h1><center><font color="red">Player Information</font></center></h1>
+
+<div class="container">
+  <form method = "POST" action="">
+    <center><label for="fname"><font color="red" size=5> Player Name</font></label></center></br>
+    <center><input type="text" id="fname" name="firstname" placeholder="Your name.."></center>
+
+    <center><label for="country"><font color="red" size=5>Country</font></label></center></br>
+    <center><input type="text" id="country" name="countr" placeholder="Country.."></center></br>
+
+    <center><input type="submit" value="Submit"></center>
+  </form>
+</div>
+
+</body>
+</html>
+

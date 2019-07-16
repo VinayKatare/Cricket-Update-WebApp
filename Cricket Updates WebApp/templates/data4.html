@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOWLING STATS</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+	<style type="text/css" media="screen">
+	    body{
+    	text-align:center;
+    	}
+
+    </style>
+<body>
+<div class="btn-group btn-group-justified">
+    <a href="table1" class="btn btn-primary">T20 ICC Rankings</a>
+    <a href="table3" class="btn btn-primary">Players</a>
+    <a href="table2" class="btn btn-primary">Batting Stats</a>
+    <a href="table5" class="btn btn-primary">Fielding Stats</a>
+    <a href="table6" class="btn btn-primary">Team Batting Stats</a>
+    <a href="table7" class="btn btn-primary">Team Bowling Stats</a>
+    <a href="table12" class="btn btn-primary">Players In Teams</a>
+    <a href="table11" class="btn btn-primary">Number Of Players In Teams</a>
+    <a href="table8" class="btn btn-primary">Admin</a>
+    </div>
+  <table class = "table table-striped table table-hover">
+   <thead>
+      <tr>
+         <th>Player</th>
+         <th>Innings Bowled</th>
+         <th>Over Bowled</th>
+         <th>Wickets Taken</th>
+         <th>Best Bowling</th>
+         <th>Runs Conceded</th>
+         <th>Average</th>
+      </tr>
+   </thead> 
+   <tbody>
+          {% for item in result %}
+        	<tr>
+        		<td >{{ item[0] }}</td>
+        		<td >{{ item[1] }}</td>
+        		<td >{{ item[2] }}</td>
+        		<td >{{ item[3] }}</td>
+        		<td >{{ item[4] }}</td>
+            <td >{{ item[5] }}</td>
+            <td >{{ item[6] }}</td>
+			</tr>
+   	  	  {% endfor %} 
+   </tbody>	
+  </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
+</html>

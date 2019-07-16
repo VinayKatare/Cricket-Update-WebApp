@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Player Details</title>
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+body, html {
+    height: 100%;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    
+    padding: 20px;
+}
+body{
+background-image:url("https://ak5.picdn.net/shutterstock/videos/4727555/thumb/11.jpg");
+background-repeat:no-repeat;
+height:100%;
+background-position:center;
+background-size:cover;
+background-attachment: fixed;
+}
+
+</style>
+</head>
+<body>
+
+<h2><center><font color="Brown">Player Information</font></center></h2>
+
+<div class="container">
+  <form method = "POST" action="">
+    {% for item in result %}
+    <label for="fname"><font color="red"> PLayer Name</font></label>
+    <input type="text" id="fname" name="fname"  disabled placeholder={{ item[0] }}>
+    {% endfor %}
+    <label for="noi"><font color="red">Number Of Innings</font></label>
+    <input type="text" id="noi" name="nooi" placeholder="Number of Innings Played">
+
+     <label for="runss"><font color="red">Runs Scored</font></label>
+    <input type="text" id="runss" name="rs" placeholder="Runs Scored">
+
+    <label for="hs"><font color="red">Highest Score</font></label>
+    <input type="text" id="hs" name="hsp" placeholder="Highest Score">
+     <label for="hun"><font color="red">100's</font></label>
+    <input type="text" id="hun" name="hund" placeholder="Number of 100's">	
+    <label for="fif"><font color="red">50's</font></label>
+    <input type="text" id="fif" name="fifty" placeholder="Number of 50's">
+    
+    <label for="innbowl"><font color="red">Innings Bowled</font></label>
+    <input type="text" id="innbowl" name="inn" placeholder="Innings Bowled">
+    
+    <label for="overs"><font color="red">Overs Bowled</font></label>
+    <input type="text" id="overs" name="ob" placeholder="Overs Bowled">
+    
+    <label for="wt"><font color="red">Wicket Taken</font></label>
+    <input type="text" id="wt" name="wct" placeholder="Wicket Taken">
+  
+    <label for="bb"><font color="red">Best Bowling</font></label>
+    <input type="text" id="bb" name="bbowl" placeholder="Best Bowling">
+
+    <label for="fivewic"><font color="red">Runs Conceded</font></label>
+    <input type="text" id="fivewic" name="rcc" placeholder="Runs Conceded">
+
+    <label for="catc"><font color="red">Catches Taken</font></label>
+    <input type="text" id="catc" name="catches" placeholder="Catches Taken">
+    <label for="stmp"><font color="red">Stumpings</font></label>
+    <input type="text" id="stmp" name="stump" placeholder="Stumpings Made">
+    
+    		
+    
+    
+    			
+
+    <center><input type="submit" value="Submit"></center>	
+  </form>
+</div>
+
+</body>
+</html>
+
